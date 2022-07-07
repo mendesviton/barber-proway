@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:project/pages/page_change_professional/widgets/body_change_professional.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(
+      title: 'App teste',
+      home: ChangeProfessional(),
+      debugShowCheckedModeBanner: false,
+    ),);
 }
 
 class MyApp extends StatelessWidget {
