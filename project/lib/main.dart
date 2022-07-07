@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,92 +30,255 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const PrincipalPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+class PrincipalPage extends StatelessWidget {
+  const PrincipalPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    var size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+        body: SingleChildScrollView(
+      child: Container(
+        // width: size.width,
+        // height: size.height,
+        decoration:
+            BoxDecoration(color: Color.fromARGB(255, 150, 91, 51), boxShadow: [
+          //efeito de profundidade
+          BoxShadow(
+              blurRadius: 30,
+              spreadRadius: 10,
+              color: Colors.blueGrey.shade50,
+              offset: Offset(2, 8))
+        ]),
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                      maxRadius: 250,
+                      child: Image.asset('assets/images/barber.png')),
+
+                  SizedBox(
+                    width: 10,
+                  ),
+                  // Text('AppBarber',
+                  //     style: TextStyle(
+                  //         color: Colors.white,
+                  //         fontSize: 17,
+                  //         fontWeight: FontWeight.bold)),
+                ],
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Container(
+              width: 350,
+              height: 450,
+              decoration: BoxDecoration(
+                  color: Colors.brown.shade900,
+                  borderRadius: BorderRadius.circular(15)),
+              // color: Colors.amber,
+              child: Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.location_on_outlined,
+                              size: 35,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            const Text(
+                              'Blumenau - SC',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontFamily: 'Roboto Mono'),
+                            )
+                          ],
+                        ),
+                      ),
+                      //CONTAINER DO MEIO
+                      Container(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.calendar_month,
+                              size: 50,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            SizedBox(
+                              width: 150,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Agendar horário',
+                                      style: TextStyle(
+                                          shadows: [
+                                            Shadow(
+                                                offset: Offset(0, 2),
+                                                blurRadius: 3,
+                                                color: Colors.black)
+                                          ],
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 19)),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text(
+                                    'Escolha o  barbeiro e agende o seu horário',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+
+                        margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 0, 255, 0),
+                            // color: Colors.blue,
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 1,
+                                spreadRadius: 1,
+                                color: Color.fromARGB(255, 101, 183, 104),
+                                // offset: Offset(2, 8))
+                              )
+                            ]),
+                        // color: Colors.white,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      ),
+                      Container(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.phone,
+                              size: 50,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            SizedBox(
+                              width: 150,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Serviços',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 19)),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text(
+                                    'Escolha o serviço de barbearia',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+
+                        margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 78, 92, 179),
+                            // color: Colors.blue,
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 2,
+                                spreadRadius: 3,
+                                color: Color.fromARGB(255, 78, 92, 179),
+                                // offset: Offset(2, 8))
+                              )
+                            ]),
+                        // color: Colors.white,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      ),
+                      Container(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.email_outlined,
+                              size: 50,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            SizedBox(
+                              width: 150,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Contato',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 19)),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'Entre em contato com o barbeiro',
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+
+                        margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 239, 131, 8),
+                            // color: Colors.blue,
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 2,
+                                spreadRadius: 3,
+                                color: Color.fromARGB(255, 239, 131, 8),
+                                // offset: Offset(2, 8))
+                              )
+                            ]),
+                        // color: Colors.white,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      )
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  )),
+            )
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    ));
   }
 }
