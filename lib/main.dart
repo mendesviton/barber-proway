@@ -3,6 +3,8 @@ import 'package:project/pages/page_calendar/calendar_page.dart';
 import 'package:project/pages/page_change_professional/widgets/body_change_professional.dart';
 import 'package:project/pages/services/widgets/card_services.dart';
 
+import 'pages/page_endereco/endereco.dart';
+
 void main() {
   runApp(
     const MaterialApp(
@@ -141,7 +143,7 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                          const Icon(
+                           Icon(
                             shadows: [
                               Shadow(
                                   offset: Offset(0, 2),
@@ -272,7 +274,10 @@ class PrincipalPage extends StatelessWidget {
                   InkWell(
                     highlightColor: Colors.blue.withOpacity(0.4),
                     splashColor: Colors.green.withOpacity(0.5),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const EnderecoPage()));
+                    },
                     child: Container(
                       margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
                       decoration: BoxDecoration(
@@ -295,9 +300,10 @@ class PrincipalPage extends StatelessWidget {
                           const Icon(
                             shadows: [
                               Shadow(
-                                  offset: Offset(0, 2),
-                                  blurRadius: 3,
-                                  color: Color.fromARGB(255, 68, 157, 16))
+                                offset: Offset(0, 2),
+                                blurRadius: 3,
+                                color: Color.fromARGB(255, 68, 157, 16),
+                              ),
                             ],
                             Icons.email_outlined,
                             size: 50,
