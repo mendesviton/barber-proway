@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../page_calendar/calendar_page.dart';
+import '../page_change_professional/widgets/body_change_professional.dart';
+
 class Servies extends StatelessWidget {
   final String type;
   final String time;
@@ -19,6 +22,8 @@ class Servies extends StatelessWidget {
     return InkWell(
       onTap: () {
         _backgroundColor = Colors.grey;
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => ChangeProfessional()));
       },
       child: Container(
         padding: const EdgeInsets.symmetric(
@@ -38,6 +43,7 @@ class Servies extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
+                  decoration: BoxDecoration(color: Colors.transparent),
                   padding: const EdgeInsets.all(10),
                   child: Text(
                     type,

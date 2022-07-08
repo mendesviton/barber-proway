@@ -37,7 +37,7 @@ class CutsPage extends StatelessWidget {
                   value: "30,00",
                 ),
                 Servies(
-                  type: "Alisamento / Relaxamento",
+                  type: "Relaxamento",
                   time: "15 min",
                   value: "30,00",
                 ),
