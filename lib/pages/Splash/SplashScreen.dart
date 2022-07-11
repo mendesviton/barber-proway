@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project/main.dart';
+import 'package:project/pages/home_page/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -8,12 +10,32 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+   @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 3)).then((value) {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
+      );
+    });
+    super.initState();
+  }
+  
+  
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-         Image.asset('assets/images/barbersplash.png'),
-      ],
+    return Scaffold(
+      backgroundColor: Colors.brown.shade700,
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+             CircleAvatar(backgroundColor: Colors.orange,maxRadius: 120,child: Image.asset('assets/images/logo.png')),
+             const CircularProgressIndicator(color: Colors.black),
+          ],
+        ),
+      ),
     );
   }
 }

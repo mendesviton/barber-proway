@@ -54,19 +54,9 @@ class RowBarber extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
         child: Container(
           decoration: BoxDecoration(
-            // image: const DecorationImage(
-            //   // image: NetworkImage('assets/images/fundo.jpg'),
-            //   fit: BoxFit.fill,
-            // ),
             color: Color.fromARGB(255, 255, 157, 10),
             borderRadius: BorderRadius.circular(10),
-            boxShadow: const [
-              BoxShadow(
-                color: Color.fromARGB(255, 0, 0, 0),
-                blurRadius: 8,
-                spreadRadius: 2,
-              ),
-            ],
+            
           ),
           child: Row(
             children: [
