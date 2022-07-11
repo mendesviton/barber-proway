@@ -216,7 +216,7 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                          const Icon(
+                           Icon(
                             shadows: [
                               Shadow(
                                   offset: Offset(0, 2),
@@ -297,7 +297,7 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                          const Icon(
+                           Icon(
                             shadows: [
                               Shadow(
                                 offset: Offset(0, 2),

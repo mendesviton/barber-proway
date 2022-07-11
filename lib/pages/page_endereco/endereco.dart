@@ -7,7 +7,7 @@ class EnderecoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(150, 150, 91, 51),
+      backgroundColor: Colors.brown.shade600,
       appBar: AppBar(
         backgroundColor: Colors.amber,
         title: const Text(
@@ -60,10 +60,11 @@ class EnderecoPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 25,
-                  width: 50,
+                  height: 27,
+                  width: 53,
                   decoration: BoxDecoration(
-                      color: Colors.amber,
+                    border: Border.all(width: 2, color: Colors.amber),
+                      color: Colors.brown.shade600,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,18 +73,21 @@ class EnderecoPage extends StatelessWidget {
                       Text(
                         'Maps',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.bold,color: Colors.white,
                         ),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(width: 10,),
+                const SizedBox(
+                  width: 10,
+                ),
                 Container(
-                  height: 25,
-                  width: 50,
+                  height: 27,
+                  width: 53,
                   decoration: BoxDecoration(
-                      color: Colors.amber,
+                    border: Border.all(width: 2, color: Colors.amber),
+                       color: Colors.brown.shade600,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,18 +96,21 @@ class EnderecoPage extends StatelessWidget {
                       Text(
                         'Waze',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.bold,color: Colors.white,
                         ),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(width: 10,),
+                const SizedBox(
+                  width: 10,
+                ),
                 Container(
-                  height: 25,
-                  width: 50,
+                  height: 27,
+                  width: 53,
                   decoration: BoxDecoration(
-                      color: Colors.amber,
+                      border: Border.all(width: 2, color: Colors.amber),
+                      color: Colors.brown.shade600,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -112,7 +119,7 @@ class EnderecoPage extends StatelessWidget {
                       Text(
                         'Uber',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.bold,color: Colors.white,
                         ),
                       ),
                     ],
