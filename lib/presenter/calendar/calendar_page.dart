@@ -13,28 +13,21 @@ class _CalendarPageState extends State<CalendarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(150, 150, 91, 51),
+      backgroundColor: Colors.brown.shade700,
       appBar: AppBar(
-        backgroundColor: Colors.black,
         leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_rounded,
-            size: 25,
-          ),
+          icon: const Icon(Icons.arrow_back_ios),
+          color: Colors.black,
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: const Padding(
-          padding: EdgeInsets.all(15),
-          child: Text(
-            "Escolha seu horário: ",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.amber,
-            ),
-          ),
+        backgroundColor: Colors.orange,
+        title: const Text(
+          'Escolha seu horário',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -62,7 +55,7 @@ class _CalendarPageState extends State<CalendarPage> {
                       Text(
                         "amanhã",
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 18,
                           color: Colors.amber,
                         ),
                       ),
@@ -110,7 +103,7 @@ class _CalendarPageState extends State<CalendarPage> {
         },
         child: Column(children: [
           Text(horario[i].toString(), style: const TextStyle(fontSize: 20),),
-          Text(option, style: const TextStyle(fontSize: 20),),
+          Text(option, style: const TextStyle(fontSize: 16),),
         ]),
       );
       myButtons.add({
