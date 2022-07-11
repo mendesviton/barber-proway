@@ -31,7 +31,7 @@ class EnderecoPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 70, bottom: 80),
               child: Image.asset(
-                "images/logo.png",
+                "assets/images/logo.png",
                 scale: 3,
               ),
             ),
