@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'widgets/card_services.dart';
 
-class CutsPage extends StatelessWidget {
-  const CutsPage({Key? key}) : super(key: key);
+class ServicesPage extends StatelessWidget {
+  const ServicesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +13,9 @@ class CutsPage extends StatelessWidget {
       backgroundColor: Colors.brown.shade700,
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios
-          ),
+          icon: const Icon(Icons.arrow_back_ios),
           color: Colors.black,
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
@@ -34,34 +33,33 @@ class CutsPage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
-                Services(
+                CardService(
                   type: "Corte Cabelo",
                   time: "30 min",
                   value: "35,00",
                 ),
-                Services(
+                CardService(
                   type: "Barba",
                   time: "30 min",
                   value: "30,00",
                 ),
-                Services(
+                CardService(
                   type: "Relaxamento",
                   time: "15 min",
                   value: "30,00",
                 ),
-                Services(
+                CardService(
                   type: "Limpeza de Ouvido",
                   time: "15 min",
                   value: "30,00",
                 ),
-                Services(
+                CardService(
                   type: "Platinado",
                   time: "1 hora",
                   value: "180,00",
                 ),
-                Services(
+                CardService(
                   type: "Reconstrução Capilar",
                   time: "15 min",
                   value: "30,00",

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../page_calendar/calendar_page.dart';
-import '../../page_change_professional/widgets/body_change_professional.dart';
+import '../../pageprofessional/widgets/body_change_professional.dart';
+import '../../professional/widgets/body_professional.dart';
 
-class Services extends StatelessWidget {
+class CardService extends StatelessWidget {
   final String type;
   final String time;
   final String value;
 
-  const Services({
+  const CardService({
     Key? key,
     required this.type,
     required this.time,
@@ -16,13 +16,16 @@ class Services extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color _backgroundColor = Colors.transparent;
+    Color backgroundColor = Colors.transparent;
 
     return InkWell(
       onTap: () {
-        _backgroundColor = Colors.grey;
+        backgroundColor = Colors.grey;
         Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const ChangeProfessional()));
+          MaterialPageRoute(
+            builder: (context) => const ChangeProfessional(),
+          ),
+        );
       },
       child: Container(
         padding: const EdgeInsets.symmetric(
@@ -30,19 +33,16 @@ class Services extends StatelessWidget {
           vertical: 10,
         ),
         decoration: BoxDecoration(
-          color: _backgroundColor,
+          color: backgroundColor,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-
           children: [
             Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  decoration: BoxDecoration(color: Colors.transparent),
+                  decoration: const BoxDecoration(color: Colors.transparent),
                   padding: const EdgeInsets.all(10),
                   child: Text(
                     type,
@@ -61,7 +61,6 @@ class Services extends StatelessWidget {
                     "Tempo: $time",
                     style: const TextStyle(
                       fontSize: 14,
-                      // fontWeight: FontWeight.bold,
                       color: Color.fromARGB(221, 255, 255, 255),
                     ),
                   ),

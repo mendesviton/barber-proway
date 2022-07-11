@@ -1,35 +1,32 @@
-
 import 'package:flutter/material.dart';
 
-import '../../page_calendar/calendar_page.dart';
-import '../../page_endereco/endereco.dart';
+import '../../calendar/calendar_page.dart';
+import '../../page_endereco/adress_page.dart';
 import '../../services/services_page.dart';
 
-
-class OptionContainer extends StatelessWidget {
-  const OptionContainer({
+class OptionHome extends StatelessWidget {
+  const OptionHome({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // width: 350,
       height: 450,
       decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-              blurRadius: 5,
-              spreadRadius: 1,
-              color: Color.fromARGB(255, 43, 31, 12),
-              // offset: Offset(2, 8))
-            )
-          ],
-          color: Colors.brown[900],
-          borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(15),
-              topRight: Radius.circular(15))),
-      // color: Colors.amber,
+        boxShadow: const [
+          BoxShadow(
+            blurRadius: 5,
+            spreadRadius: 1,
+            color: Color.fromARGB(255, 43, 31, 12),
+          )
+        ],
+        color: Colors.brown[900],
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(15),
+          topRight: Radius.circular(15),
+        ),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -65,27 +62,31 @@ class OptionContainer extends StatelessWidget {
             highlightColor: Colors.blue.withOpacity(0.4),
             splashColor: Colors.green.withOpacity(0.5),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => CalendarPage()));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const CalendarPage(),
+                ),
+              );
             },
             child: Container(
               margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
               decoration: BoxDecoration(
                 color: Colors.orange,
-                // color: Colors.blue,
                 borderRadius: BorderRadius.circular(15),
               ),
-              // color: Colors.white,
               padding: const EdgeInsets.symmetric(
-                  horizontal: 20, vertical: 20),
+                horizontal: 20,
+                vertical: 20,
+              ),
               child: Row(
-                children:  [
-                 const Icon(
+                children: [
+                  Icon(
                     shadows: [
                       Shadow(
-                          offset: Offset(0, 2),
-                          blurRadius: 3,
-                          color: Color.fromARGB(255, 78, 74, 70))
+                        offset: Offset(0, 2),
+                        blurRadius: 3,
+                        color: Color.fromARGB(255, 78, 74, 70),
+                      )
                     ],
                     Icons.calendar_month,
                     size: 50,
@@ -104,10 +105,10 @@ class OptionContainer extends StatelessWidget {
                             style: TextStyle(
                                 shadows: [
                                   Shadow(
-                                      offset: Offset(0, 2),
-                                      blurRadius: 3,
-                                      color: Color.fromARGB(
-                                          255, 78, 74, 70))
+                                    offset: Offset(0, 2),
+                                    blurRadius: 3,
+                                    color: Color.fromARGB(255, 78, 74, 70),
+                                  )
                                 ],
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -121,10 +122,10 @@ class OptionContainer extends StatelessWidget {
                             color: Colors.white,
                             shadows: [
                               Shadow(
-                                  offset: Offset(0, 2),
-                                  blurRadius: 3,
-                                  color:
-                                      Color.fromARGB(255, 78, 74, 70))
+                                offset: Offset(0, 2),
+                                blurRadius: 3,
+                                color: Color.fromARGB(255, 78, 74, 70),
+                              )
                             ],
                           ),
                         )
@@ -140,26 +141,30 @@ class OptionContainer extends StatelessWidget {
             splashColor: Colors.green.withOpacity(0.5),
             onTap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => CutsPage()));
+                MaterialPageRoute(
+                  builder: (context) => const ServicesPage(),
+                ),
+              );
             },
             child: Container(
-              margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+              margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
               decoration: BoxDecoration(
                 color: Colors.orange,
-                // color: Colors.blue,
                 borderRadius: BorderRadius.circular(15),
               ),
-              // color: Colors.white,
               padding: const EdgeInsets.symmetric(
-                  horizontal: 20, vertical: 20),
+                horizontal: 20,
+                vertical: 20,
+              ),
               child: Row(
                 children: [
                   Icon(
                     shadows: [
                       Shadow(
-                          offset: Offset(0, 2),
-                          blurRadius: 3,
-                          color: Color.fromARGB(255, 84, 72, 9))
+                        offset: Offset(0, 2),
+                        blurRadius: 3,
+                        color: Color.fromARGB(255, 84, 72, 9),
+                      )
                     ],
                     Icons.phone,
                     size: 50,
@@ -178,10 +183,10 @@ class OptionContainer extends StatelessWidget {
                             style: TextStyle(
                                 shadows: [
                                   Shadow(
-                                      offset: Offset(0, 2),
-                                      blurRadius: 3,
-                                      color: Color.fromARGB(
-                                          255, 78, 74, 70))
+                                    offset: Offset(0, 2),
+                                    blurRadius: 3,
+                                    color: Color.fromARGB(255, 78, 74, 70),
+                                  )
                                 ],
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -195,10 +200,10 @@ class OptionContainer extends StatelessWidget {
                             color: Colors.white,
                             shadows: [
                               Shadow(
-                                  offset: Offset(0, 2),
-                                  blurRadius: 3,
-                                  color:
-                                      Color.fromARGB(255, 78, 74, 70))
+                                offset: Offset(0, 2),
+                                blurRadius: 3,
+                                color: Color.fromARGB(255, 78, 74, 70),
+                              )
                             ],
                           ),
                         )
@@ -213,26 +218,22 @@ class OptionContainer extends StatelessWidget {
             highlightColor: Colors.blue.withOpacity(0.4),
             splashColor: Colors.green.withOpacity(0.5),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const EnderecoPage()));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const EnderecoPage(),
+                ),
+              );
             },
             child: Container(
-              margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+              margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
               decoration: BoxDecoration(
                 color: Colors.orange,
-                // color: Colors.blue,
                 borderRadius: BorderRadius.circular(15),
-                // boxShadow: const [
-                //   BoxShadow(
-                //     blurRadius: 2,
-                //     spreadRadius: 3,
-                //     color: Color.fromARGB(155, 0, 0, 0),
-                //     // offset: Offset(2, 8))
-                //   )]
               ),
-              // color: Colors.white,
               padding: const EdgeInsets.symmetric(
-                  horizontal: 20, vertical: 20),
+                horizontal: 20,
+                vertical: 20,
+              ),
               child: Row(
                 children: [
                   Icon(
@@ -256,18 +257,20 @@ class OptionContainer extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Contato',
-                            style: TextStyle(
-                                shadows: [
-                                  Shadow(
-                                      offset: Offset(0, 2),
-                                      blurRadius: 3,
-                                      color: Color.fromARGB(
-                                          255, 78, 74, 70))
-                                ],
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 19)),
+                        Text(
+                          'Contato',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(0, 2),
+                                  blurRadius: 3,
+                                  color: Color.fromARGB(255, 78, 74, 70),
+                                )
+                              ],
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19),
+                        ),
                         SizedBox(height: 10),
                         Text(
                           'Entre em contato com o barbeiro',
@@ -275,10 +278,10 @@ class OptionContainer extends StatelessWidget {
                             color: Colors.white,
                             shadows: [
                               Shadow(
-                                  offset: Offset(0, 2),
-                                  blurRadius: 3,
-                                  color:
-                                      Color.fromARGB(255, 78, 74, 70))
+                                offset: Offset(0, 2),
+                                blurRadius: 3,
+                                color: Color.fromARGB(255, 78, 74, 70),
+                              )
                             ],
                           ),
                         )

@@ -1,14 +1,7 @@
-
 import 'package:flutter/material.dart';
 
-import '../../page_calendar/calendar_page.dart';
-import '../../page_endereco/endereco.dart';
-import '../../services/services_page.dart';
-
-
-
-class HeaderContainer extends StatelessWidget {
-  const HeaderContainer({
+class HeaderHome extends StatelessWidget {
+  const HeaderHome({
     Key? key,
   }) : super(key: key);
 
@@ -24,17 +17,10 @@ class HeaderContainer extends StatelessWidget {
             backgroundColor: Colors.orange,
             maxRadius: 90,
             child: Image.asset('assets/images/logo.png'),
-            
           ),
-
           const SizedBox(
             width: 10,
           ),
-          // Text('AppBarber',
-          //     style: TextStyle(
-          //         color: Colors.white,
-          //         fontSize: 17,
-          //         fontWeight: FontWeight.bold)),
         ],
       ),
     );
