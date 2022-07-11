@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../adress/adress_page.dart';
 import '../../calendar/calendar_page.dart';
-import '../../page_endereco/adress_page.dart';
 import '../../services/services_page.dart';
 
 class OptionHome extends StatelessWidget {
@@ -220,7 +220,7 @@ class OptionHome extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => const EnderecoPage(),
+                  builder: (context) => const AdressPage(),
                 ),
               );
             },

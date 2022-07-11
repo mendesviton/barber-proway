@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EnderecoPage extends StatelessWidget {
-  const EnderecoPage({Key? key}) : super(key: key);
+class AdressPage extends StatelessWidget {
+  const AdressPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
