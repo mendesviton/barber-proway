@@ -9,6 +9,15 @@ class EnderecoPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(150, 150, 91, 51),
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios
+          ),
+          color: Colors.black,
+          onPressed: (){
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: Colors.amber,
         title: const Text(
           'Endereço',
