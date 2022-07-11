@@ -1,28 +1,40 @@
 import 'package:flutter/material.dart';
 
-class CalendarPage extends StatelessWidget {
+class CalendarPage extends StatefulWidget {
   const CalendarPage({Key? key}) : super(key: key);
+
+  @override
+  State<CalendarPage> createState() => _CalendarPageState();
+}
+
+class _CalendarPageState extends State<CalendarPage> {
+  List<Map> myButtons = [{}];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown.shade700,
+      backgroundColor: const Color.fromARGB(150, 150, 91, 51),
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_ios
+            Icons.arrow_back_rounded,
+            size: 25,
           ),
-          color: Colors.black,
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.orange,
-        title: const Text(
-          'Escolha seu horário',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        title: const Padding(
+          padding: EdgeInsets.all(15),
+          child: Text(
+            "Escolha seu horário: ",
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.amber,
+            ),
+          ),
         ),
-        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -36,12 +48,12 @@ class CalendarPage extends StatelessWidget {
                   const Icon(
                     Icons.arrow_back_ios_new_sharp,
                     size: 20,
-                    color: Colors.orange,
+                    color: Colors.amber,
                   ),
                   Column(
-                    children: const [
+                    children: const[
                       Text(
-                        "08 de julho",
+                        "12 de julho",
                         style: TextStyle(
                           fontSize: 24,
                           color: Colors.white,
@@ -50,8 +62,8 @@ class CalendarPage extends StatelessWidget {
                       Text(
                         "amanhã",
                         style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.orange,
+                          fontSize: 24,
+                          color: Colors.amber,
                         ),
                       ),
                     ],
@@ -59,746 +71,55 @@ class CalendarPage extends StatelessWidget {
                   const Icon(
                     Icons.arrow_forward_ios_sharp,
                     size: 20,
-                    color: Colors.orange,
+                    color: Colors.amber,
                   ),
                 ],
               ),
             ),
             Wrap(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "08:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "08:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "09:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "09:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "10:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "10:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "11:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "11:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "12:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "12:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "13:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "13:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "14:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "14:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "15:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "15:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "16:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "16:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "17:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "17:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "18:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "18:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "19:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "19:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "20:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "20:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "21:00",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  padding: const EdgeInsets.all(12),
-                  margin: const EdgeInsets.all(6),
-                  child: Column(
-                    children: const [
-                      Text(
-                        "21:30",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        "Reservado",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+              spacing: 5, runSpacing: 12, children: buildButtons(),
             ),
           ],
         ),
       ),
     );
+  }
+
+  List<Widget> buildButtons() {
+    List<Widget> listButtons = List.generate(24, (i) {
+      Color colorButton = Colors.amber;
+      if (myButtons.isNotEmpty && myButtons[i].isNotEmpty) {
+        colorButton = myButtons[i]['active'] ? Colors.grey : Colors.amber;
+      }
+      
+      String option = "Disponível";
+      if (myButtons.isNotEmpty && myButtons[i].isNotEmpty) {
+        option = myButtons[i]['active'] ? "Reservado" : "Disponível";
+      }
+
+      List<String> horario = [ "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+       "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"];
+
+      Widget button = MaterialButton(
+        color: colorButton,
+        onPressed: () {
+          if (myButtons.isNotEmpty && myButtons[i].isNotEmpty) {
+            myButtons[i]['active'] = !myButtons[i]['active'];
+            setState(() {});
+          }
+        },
+        child: Column(children: [
+          Text(horario[i].toString(), style: const TextStyle(fontSize: 20),),
+          Text(option, style: const TextStyle(fontSize: 20),),
+        ]),
+      );
+      myButtons.add({
+        'button': button,
+        'active': false,
+      });
+      return button;
+    });
+
+    return listButtons;
   }
 }
