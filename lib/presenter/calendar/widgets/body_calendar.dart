@@ -26,7 +26,7 @@ class _CalendarBodyState extends State<CalendarBody> {
                 const Icon(
                   Icons.arrow_back_ios_new_sharp,
                   size: 20,
-                  color: Colors.amber,
+                  color: Colors.orange,
                 ),
                 Column(
                   children: const [
@@ -40,8 +40,8 @@ class _CalendarBodyState extends State<CalendarBody> {
                     Text(
                       "amanhã",
                       style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.amber,
+                        fontSize: 18,
+                        color: Colors.orange,
                       ),
                     ),
                   ],
@@ -49,14 +49,14 @@ class _CalendarBodyState extends State<CalendarBody> {
                 const Icon(
                   Icons.arrow_forward_ios_sharp,
                   size: 20,
-                  color: Colors.amber,
+                  color: Colors.orange,
                 ),
               ],
             ),
           ),
           Wrap(
-            spacing: 5,
-            runSpacing: 12,
+            spacing: 7,
+            runSpacing: 15,
             children: buildButtons(),
           ),
         ],
@@ -68,9 +68,9 @@ class _CalendarBodyState extends State<CalendarBody> {
     List<Widget> listButtons = List.generate(
       24,
       (i) {
-        Color colorButton = Colors.amber;
+        Color colorButton = Colors.orange;
         if (myButtons.isNotEmpty && myButtons[i].isNotEmpty) {
-          colorButton = myButtons[i]['active'] ? Colors.grey : Colors.amber;
+          colorButton = myButtons[i]['active'] ? Colors.grey : Colors.orange;
         }
 
         String option = "Disponível";
@@ -117,11 +117,11 @@ class _CalendarBodyState extends State<CalendarBody> {
             children: [
               Text(
                 horario[i].toString(),
-                style: const TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
               Text(
                 option,
-                style: const TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 16, color: Colors.white),
               ),
             ],
           ),
