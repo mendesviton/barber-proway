@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../presenter/professional/widgets/body_professional.dart';
+import 'widgets/body_calendar.dart';
 
-class ChangeProfessional extends StatefulWidget {
-  const ChangeProfessional({Key? key}) : super(key: key);
+class CalendarPage extends StatelessWidget {
+  const CalendarPage({Key? key}) : super(key: key);
 
-  @override
-  State<ChangeProfessional> createState() => _ChangeProfessionalState();
-}
-
-class _ChangeProfessionalState extends State<ChangeProfessional> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown.shade700,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
@@ -23,12 +19,14 @@ class _ChangeProfessionalState extends State<ChangeProfessional> {
         ),
         backgroundColor: Colors.orange,
         title: const Text(
-          'Escolha o profissional',
+          'Escolha seu horário',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
-      body: BodyProfessional(),
+
+      body: const CalendarBody(),
     );
   }
 }
+      
