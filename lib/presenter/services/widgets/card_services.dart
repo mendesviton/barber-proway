@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+
 import '../../professional/widgets/body_professional.dart';
 
-class CardService extends StatelessWidget {
+class CardServices extends StatelessWidget {
   final String type;
   final String time;
   final String value;
 
-  const CardService({
+  const CardServices({
     Key? key,
     required this.type,
     required this.time,
@@ -49,6 +50,9 @@ class CardService extends StatelessWidget {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.orange,
+                    // decoration: Shadow(
+
+                    // ),
                     ),
                   ),
                 ),

@@ -46,10 +46,11 @@ class OptionHome extends StatelessWidget {
                 Text(
                   'Blumenau - SC',
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'Roboto Mono'),
-                )
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: 'Roboto Mono',
+                  ),
+                ),
               ],
             ),
           ),
@@ -101,18 +102,20 @@ class OptionHome extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Agendar horário',
-                            style: TextStyle(
-                                shadows: [
-                                  Shadow(
-                                    offset: Offset(0, 2),
-                                    blurRadius: 3,
-                                    color: Color.fromARGB(255, 78, 74, 70),
-                                  )
-                                ],
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 19)),
+                        Text(
+                          'Agendar horário',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(0, 2),
+                                  blurRadius: 3,
+                                  color: Color.fromARGB(255, 78, 74, 70),
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19),
+                        ),
                         SizedBox(
                           height: 6,
                         ),

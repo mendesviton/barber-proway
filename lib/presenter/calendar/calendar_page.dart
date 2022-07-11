@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'widgets/body_adress.dart';
 
-class AdressPage extends StatelessWidget {
-  const AdressPage({Key? key}) : super(key: key);
+import 'widgets/body_calendar.dart';
+
+class CalendarPage extends StatelessWidget {
+  const CalendarPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +19,14 @@ class AdressPage extends StatelessWidget {
         ),
         backgroundColor: Colors.orange,
         title: const Text(
-          'Contato',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
+          'Escolha seu horário',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
-      body: const BodyAdress(),
+
+      body: const CalendarBody(),
     );
   }
 }
+      

@@ -23,7 +23,7 @@ class PlataformButton extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
-        children:  [
+        children: [
           Text(
             plataform,
             style: const TextStyle(
