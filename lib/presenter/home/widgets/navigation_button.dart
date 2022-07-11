@@ -1,71 +1,7 @@
+
 import 'package:flutter/material.dart';
 
-import '../../adress/adress_page.dart';
-import '../../calendar/calendar_page.dart';
 import '../../services/services_page.dart';
-
-class OptionHome extends StatelessWidget {
-  const OptionHome({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 450,
-      decoration: BoxDecoration(
-        boxShadow: const [
-          BoxShadow(
-            blurRadius: 5,
-            spreadRadius: 1,
-            color: Color.fromARGB(255, 43, 31, 12),
-          )
-        ],
-        color: Colors.brown[900],
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(15),
-          topRight: Radius.circular(15),
-        ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
-                  Icons.location_on_outlined,
-                  size: 35,
-                  color: Colors.white,
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  'Blumenau - SC',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'Roboto Mono'),
-                )
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-
-          const NavigationButton(title: 'Agendar horário',description: 'Escolha o barbeiro e agende o seu horário'),
-          const NavigationButton(title: 'Serviços',description: 'Escolha uma serviço de barbearia'),
-          const NavigationButton(title: 'Contato',description: 'Fale conosco'),
-          
-        ],
-      ),
-    );
-  }
-}
 
 class NavigationButton extends StatelessWidget {
   
