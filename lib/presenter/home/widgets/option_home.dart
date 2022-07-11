@@ -46,10 +46,11 @@ class OptionHome extends StatelessWidget {
                 Text(
                   'Blumenau - SC',
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'Roboto Mono'),
-                )
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: 'Roboto Mono',
+                  ),
+                ),
               ],
             ),
           ),
@@ -57,10 +58,250 @@ class OptionHome extends StatelessWidget {
             height: 15,
           ),
 
+<<<<<<< HEAD
           const NavigationButton(title: 'Agendar horário',description: 'Escolha o barbeiro e agende o seu horário'),
           const NavigationButton(title: 'Serviços',description: 'Escolha uma serviço de barbearia'),
           const NavigationButton(title: 'Contato',description: 'Fale conosco'),
           
+=======
+          //CONTAINER DO MEIO
+          InkWell(
+            highlightColor: Colors.blue.withOpacity(0.4),
+            splashColor: Colors.green.withOpacity(0.5),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const CalendarPage(),
+                ),
+              );
+            },
+            child: Container(
+              margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 20,
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    shadows: [
+                      Shadow(
+                        offset: Offset(0, 2),
+                        blurRadius: 3,
+                        color: Color.fromARGB(255, 78, 74, 70),
+                      )
+                    ],
+                    Icons.calendar_month,
+                    size: 50,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  SizedBox(
+                    width: 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Agendar horário',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(0, 2),
+                                  blurRadius: 3,
+                                  color: Color.fromARGB(255, 78, 74, 70),
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19),
+                        ),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                          'Escolha o  barbeiro e agende o seu horário',
+                          style: TextStyle(
+                            color: Colors.white,
+                            shadows: [
+                              Shadow(
+                                offset: Offset(0, 2),
+                                blurRadius: 3,
+                                color: Color.fromARGB(255, 78, 74, 70),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            highlightColor: Colors.blue.withOpacity(0.4),
+            splashColor: Colors.green.withOpacity(0.5),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ServicesPage(),
+                ),
+              );
+            },
+            child: Container(
+              margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 20,
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    shadows: [
+                      Shadow(
+                        offset: Offset(0, 2),
+                        blurRadius: 3,
+                        color: Color.fromARGB(255, 84, 72, 9),
+                      )
+                    ],
+                    Icons.phone,
+                    size: 50,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  SizedBox(
+                    width: 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Serviços',
+                            style: TextStyle(
+                                shadows: [
+                                  Shadow(
+                                    offset: Offset(0, 2),
+                                    blurRadius: 3,
+                                    color: Color.fromARGB(255, 78, 74, 70),
+                                  )
+                                ],
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 19)),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                          'Escolha o serviço de barbearia',
+                          style: TextStyle(
+                            color: Colors.white,
+                            shadows: [
+                              Shadow(
+                                offset: Offset(0, 2),
+                                blurRadius: 3,
+                                color: Color.fromARGB(255, 78, 74, 70),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            highlightColor: Colors.blue.withOpacity(0.4),
+            splashColor: Colors.green.withOpacity(0.5),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const AdressPage(),
+                ),
+              );
+            },
+            child: Container(
+              margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 20,
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    shadows: [
+                      Shadow(
+                        offset: Offset(0, 2),
+                        blurRadius: 3,
+                        color: Color.fromARGB(255, 78, 74, 70),
+                      ),
+                    ],
+                    Icons.email_outlined,
+                    size: 50,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  SizedBox(
+                    width: 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Contato',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(0, 2),
+                                  blurRadius: 3,
+                                  color: Color.fromARGB(255, 78, 74, 70),
+                                )
+                              ],
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Entre em contato com o barbeiro',
+                          style: TextStyle(
+                            color: Colors.white,
+                            shadows: [
+                              Shadow(
+                                offset: Offset(0, 2),
+                                blurRadius: 3,
+                                color: Color.fromARGB(255, 78, 74, 70),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
+>>>>>>> e0c71eddf5d67fe6dec5789486a4d257fff45002
         ],
       ),
     );

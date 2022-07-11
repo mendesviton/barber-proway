@@ -50,6 +50,9 @@ class CardServices extends StatelessWidget {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.orange,
+                    // decoration: Shadow(
+
+                    // ),
                     ),
                   ),
                 ),
