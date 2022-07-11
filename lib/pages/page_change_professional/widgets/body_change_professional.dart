@@ -17,7 +17,7 @@ class ChangeProfessional extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.orange,
         title: const Text(
           'Escolha o profissional',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -25,8 +25,8 @@ class ChangeProfessional extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 150, 91, 51),
+        decoration: BoxDecoration(
+          color: Colors.brown.shade700,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

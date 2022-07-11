@@ -10,7 +10,7 @@ void main() {
   runApp(
     const MaterialApp(
       title: 'App teste',
-      home:MyApp(),
+      home: MyApp(),
       // home: PrincipalPage(),
       debugShowCheckedModeBanner: false,
     ),
@@ -45,9 +45,8 @@ class PrincipalPage extends StatelessWidget {
       physics: PageScrollPhysics(),
       child: Container(
         // width: size.width,
-        // height: size.height,
-        decoration:
-            BoxDecoration(color: Color.fromARGB(150, 150, 91, 51), boxShadow: [
+        height: size.height,
+        decoration: BoxDecoration(color: Colors.brown[800], boxShadow: [
           //efeito de profundidade
           BoxShadow(
               blurRadius: 30,
@@ -63,12 +62,11 @@ class PrincipalPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    
-
-                      // radius: 50,
-                      backgroundColor: Colors.orange,
-                      maxRadius: 90,
-                      child: Image.asset('assets/images/logo.png')),
+                    // radius: 50,
+                    backgroundColor: Colors.orange,
+                    maxRadius: 90,
+                    child: Image.asset('images/logo.png'),
+                  ),
 
                   const SizedBox(
                     width: 10,
@@ -93,8 +91,10 @@ class PrincipalPage extends StatelessWidget {
                       // offset: Offset(2, 8))
                     )
                   ],
-                  color: Color.fromARGB(255, 14, 10, 10),
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))),
+                  color: Colors.brown[900],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(15))),
               // color: Colors.amber,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -146,12 +146,12 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                           Icon(
+                          Icon(
                             shadows: [
                               Shadow(
                                   offset: Offset(0, 2),
                                   blurRadius: 3,
-                                  color: Color.fromARGB(255, 172, 148, 16))
+                                  color: Color.fromARGB(255, 78, 74, 70))
                             ],
                             Icons.calendar_month,
                             size: 50,
@@ -173,7 +173,7 @@ class PrincipalPage extends StatelessWidget {
                                               offset: Offset(0, 2),
                                               blurRadius: 3,
                                               color: Color.fromARGB(
-                                                  255, 172, 148, 16))
+                                                  255, 78, 74, 70))
                                         ],
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
@@ -189,7 +189,8 @@ class PrincipalPage extends StatelessWidget {
                                       Shadow(
                                           offset: Offset(0, 2),
                                           blurRadius: 3,
-                                          color: Color.fromARGB(255, 84, 72, 9))
+                                          color:
+                                              Color.fromARGB(255, 78, 74, 70))
                                     ],
                                   ),
                                 )
@@ -210,7 +211,7 @@ class PrincipalPage extends StatelessWidget {
                     child: Container(
                       margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 78, 92, 179),
+                        color: Colors.orange,
                         // color: Colors.blue,
                         borderRadius: BorderRadius.circular(15),
                       ),
@@ -219,7 +220,7 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                           Icon(
+                          Icon(
                             shadows: [
                               Shadow(
                                   offset: Offset(0, 2),
@@ -246,7 +247,7 @@ class PrincipalPage extends StatelessWidget {
                                               offset: Offset(0, 2),
                                               blurRadius: 3,
                                               color: Color.fromARGB(
-                                                  255, 52, 57, 209))
+                                                  255, 78, 74, 70))
                                         ],
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
@@ -263,7 +264,7 @@ class PrincipalPage extends StatelessWidget {
                                           offset: Offset(0, 2),
                                           blurRadius: 3,
                                           color:
-                                              Color.fromARGB(255, 10, 41, 140))
+                                              Color.fromARGB(255, 78, 74, 70))
                                     ],
                                   ),
                                 )
@@ -284,17 +285,17 @@ class PrincipalPage extends StatelessWidget {
                     child: Container(
                       margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 105, 174, 35),
-                          // color: Colors.blue,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: const [
-                            BoxShadow(
-                              blurRadius: 2,
-                              spreadRadius: 3,
-                              color: Color.fromARGB(155, 0, 0, 0),
-                              // offset: Offset(2, 8))
-                            )
-                          ]),
+                        color: Colors.orange,
+                        // color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15),
+                        // boxShadow: const [
+                        //   BoxShadow(
+                        //     blurRadius: 2,
+                        //     spreadRadius: 3,
+                        //     color: Color.fromARGB(155, 0, 0, 0),
+                        //     // offset: Offset(2, 8))
+                        //   )]
+                      ),
                       // color: Colors.white,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 20),
@@ -305,7 +306,7 @@ class PrincipalPage extends StatelessWidget {
                               Shadow(
                                 offset: Offset(0, 2),
                                 blurRadius: 3,
-                                color: Color.fromARGB(255, 68, 157, 16),
+                                color: Color.fromARGB(255, 78, 74, 70),
                               ),
                             ],
                             Icons.email_outlined,
@@ -328,7 +329,7 @@ class PrincipalPage extends StatelessWidget {
                                               offset: Offset(0, 2),
                                               blurRadius: 3,
                                               color: Color.fromARGB(
-                                                  255, 34, 85, 4))
+                                                  255, 78, 74, 70))
                                         ],
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
@@ -343,7 +344,7 @@ class PrincipalPage extends StatelessWidget {
                                           offset: Offset(0, 2),
                                           blurRadius: 3,
                                           color:
-                                              Color.fromARGB(255, 58, 141, 9))
+                                              Color.fromARGB(255, 78, 74, 70))
                                     ],
                                   ),
                                 )

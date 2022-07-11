@@ -38,8 +38,9 @@ class EnderecoPage extends StatelessWidget {
             const Text(
               'Alces Barbearia',
               style:
-                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold,fontSize: 20),
             ),
+            const SizedBox(height: 8),
             const Text(
               'Rua Erich Steinbach 22, Sala 2',
               style: TextStyle(color: Colors.white),
@@ -56,10 +57,11 @@ class EnderecoPage extends StatelessWidget {
               height: 90,
             ),
             const Text(
-              'Telefone:',
+              'Telefone',
               style:
-                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold,fontSize: 20),
             ),
+            const SizedBox(height: 8,),
             const Text(
               '(47) 98789-4232',
               style: TextStyle(

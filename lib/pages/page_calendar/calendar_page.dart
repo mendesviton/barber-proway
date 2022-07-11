@@ -6,7 +6,7 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(150, 150, 91, 51),
+      backgroundColor: Colors.brown.shade700,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
@@ -17,7 +17,7 @@ class CalendarPage extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.orange,
         title: const Text(
           'Escolha seu horário',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -36,7 +36,7 @@ class CalendarPage extends StatelessWidget {
                   const Icon(
                     Icons.arrow_back_ios_new_sharp,
                     size: 20,
-                    color: Colors.amber,
+                    color: Colors.orange,
                   ),
                   Column(
                     children: const [
@@ -50,8 +50,8 @@ class CalendarPage extends StatelessWidget {
                       Text(
                         "amanhã",
                         style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.amber,
+                          fontSize: 18,
+                          color: Colors.orange,
                         ),
                       ),
                     ],
@@ -59,7 +59,7 @@ class CalendarPage extends StatelessWidget {
                   const Icon(
                     Icons.arrow_forward_ios_sharp,
                     size: 20,
-                    color: Colors.amber,
+                    color: Colors.orange,
                   ),
                 ],
               ),

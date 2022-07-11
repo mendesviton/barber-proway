@@ -9,7 +9,7 @@ class CutsPage extends StatelessWidget {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(150, 150, 91, 51),
+      backgroundColor: Colors.brown.shade700,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
@@ -20,7 +20,7 @@ class CutsPage extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.orange,
         title: const Text(
           'Serviços',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),

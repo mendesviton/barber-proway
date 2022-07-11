@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../page_calendar/calendar_page.dart';
 import '../../page_change_professional/widgets/body_change_professional.dart';
 
@@ -50,7 +49,7 @@ class Services extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.amber,
+                      color: Colors.orange,
                     ),
                   ),
                 ),
@@ -76,7 +75,7 @@ class Services extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.amber,
+                  color: Colors.orange,
                 ),
               ),
             ),
