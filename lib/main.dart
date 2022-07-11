@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project/pages/page_calendar/calendar_page.dart';
 import 'package:project/pages/page_change_professional/widgets/body_change_professional.dart';
-import 'package:project/pages/services/widgets/card_services.dart';
+import 'package:project/pages/services/services_page.dart';
 
 import 'pages/page_endereco/endereco.dart';
 
@@ -90,7 +90,7 @@ class PrincipalPage extends StatelessWidget {
                       // offset: Offset(2, 8))
                     )
                   ],
-                  color: Color.fromARGB(255, 14, 10, 10),
+                  color: Color.fromARGB(255, 101, 88, 54),
                   borderRadius: BorderRadius.circular(15)),
               // color: Colors.amber,
               child: Column(
@@ -216,7 +216,7 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                          const Icon(
+                          Icon(
                             shadows: [
                               Shadow(
                                   offset: Offset(0, 2),
@@ -297,7 +297,7 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                          const Icon(
+                          Icon(
                             shadows: [
                               Shadow(
                                 offset: Offset(0, 2),

@@ -8,26 +8,21 @@ class CalendarPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(150, 150, 91, 51),
       appBar: AppBar(
-        backgroundColor: Colors.black,
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_rounded,
-            size: 25,
+            Icons.arrow_back_ios
           ),
-          onPressed: () {
+          color: Colors.black,
+          onPressed: (){
             Navigator.pop(context);
           },
         ),
-        title: const Padding(
-          padding: EdgeInsets.all(15),
-          child: Text(
-            "Escolha seu horário: ",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.amber,
-            ),
-          ),
+        backgroundColor: Colors.amber,
+        title: const Text(
+          'Escolha seu horário',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(

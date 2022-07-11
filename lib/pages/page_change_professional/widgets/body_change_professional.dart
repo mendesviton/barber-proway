@@ -8,16 +8,21 @@ class ChangeProfessional extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 14, 10, 10),
-        title: const Text(
-          'Escolha o profissional:',
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.bold,
-            color: Colors.amber,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios
           ),
+          color: Colors.black,
+          onPressed: (){
+            Navigator.pop(context);
+          },
         ),
-        elevation: 0,
+        backgroundColor: Colors.amber,
+        title: const Text(
+          'Escolha o profissional',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
       ),
       body: Container(
         decoration: const BoxDecoration(

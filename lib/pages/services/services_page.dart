@@ -1,86 +1,74 @@
 import 'package:flutter/material.dart';
+import 'widgets/card_services.dart';
 
-import '../page_calendar/calendar_page.dart';
-import '../page_change_professional/widgets/body_change_professional.dart';
-
-class Servies extends StatelessWidget {
-  final String type;
-  final String time;
-  final String value;
-
-  const Servies({
-    Key? key,
-    required this.type,
-    required this.time,
-    required this.value,
-  }) : super(key: key);
+class CutsPage extends StatelessWidget {
+  const CutsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Color _backgroundColor = Colors.transparent;
+    var size = MediaQuery.of(context).size;
 
-    return InkWell(
-      onTap: () {
-        _backgroundColor = Colors.grey;
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => ChangeProfessional()));
-      },
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 10,
-          vertical: 10,
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(150, 150, 91, 51),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios
+          ),
+          color: Colors.black,
+          onPressed: (){
+            Navigator.pop(context);
+          },
         ),
-        decoration: BoxDecoration(
-          color: _backgroundColor,
+        backgroundColor: Colors.amber,
+        title: const Text(
+          'Serviços',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-
-          children: [
-            Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  decoration: BoxDecoration(color: Colors.transparent),
-                  padding: const EdgeInsets.all(10),
-                  child: Text(
-                    type,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.amber,
-                    ),
-                  ),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: SizedBox(
+          height: size.height,
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                Services(
+                  type: "Corte Cabelo",
+                  time: "30 min",
+                  value: "35,00",
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                  ),
-                  child: Text(
-                    "Tempo: $time",
-                    style: const TextStyle(
-                      fontSize: 14,
-                      // fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(221, 255, 255, 255),
-                    ),
-                  ),
+                Services(
+                  type: "Barba",
+                  time: "30 min",
+                  value: "30,00",
+                ),
+                Services(
+                  type: "Relaxamento",
+                  time: "15 min",
+                  value: "30,00",
+                ),
+                Services(
+                  type: "Limpeza de Ouvido",
+                  time: "15 min",
+                  value: "30,00",
+                ),
+                Services(
+                  type: "Platinado",
+                  time: "1 hora",
+                  value: "180,00",
+                ),
+                Services(
+                  type: "Reconstrução Capilar",
+                  time: "15 min",
+                  value: "30,00",
                 ),
               ],
             ),
-            Container(
-              padding: const EdgeInsets.all(5),
-              child: Text(
-                "R\$ $value",
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.amber,
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
