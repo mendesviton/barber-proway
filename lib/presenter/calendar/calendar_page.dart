@@ -41,7 +41,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   const Icon(
                     Icons.arrow_back_ios_new_sharp,
                     size: 20,
-                    color: Colors.amber,
+                    color: Colors.orange,
                   ),
                   Column(
                     children: const[
@@ -56,7 +56,7 @@ class _CalendarPageState extends State<CalendarPage> {
                         "amanhã",
                         style: TextStyle(
                           fontSize: 18,
-                          color: Colors.amber,
+                          color: Colors.orange,
                         ),
                       ),
                     ],
@@ -64,7 +64,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   const Icon(
                     Icons.arrow_forward_ios_sharp,
                     size: 20,
-                    color: Colors.amber,
+                    color: Colors.orange,
                   ),
                 ],
               ),
@@ -80,9 +80,9 @@ class _CalendarPageState extends State<CalendarPage> {
 
   List<Widget> buildButtons() {
     List<Widget> listButtons = List.generate(24, (i) {
-      Color colorButton = Colors.amber;
+      Color colorButton = Colors.orange;
       if (myButtons.isNotEmpty && myButtons[i].isNotEmpty) {
-        colorButton = myButtons[i]['active'] ? Colors.grey : Colors.amber;
+        colorButton = myButtons[i]['active'] ? Colors.grey : Colors.orange;
       }
       
       String option = "Disponível";
