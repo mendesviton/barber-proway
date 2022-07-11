@@ -17,7 +17,7 @@ class ChangeProfessional extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.orange,
         title: const Text(
           'Escolha o profissional',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),

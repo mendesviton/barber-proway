@@ -49,7 +49,7 @@ class Services extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.amber,
+                      color: Colors.orange,
                     ),
                   ),
                 ),
@@ -75,7 +75,7 @@ class Services extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.amber,
+                  color: Colors.orange,
                 ),
               ),
             ),

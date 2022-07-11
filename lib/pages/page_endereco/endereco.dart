@@ -18,7 +18,7 @@ class EnderecoPage extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.orange,
         title: const Text(
           'Endereço',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -34,7 +34,7 @@ class EnderecoPage extends StatelessWidget {
             const Text(
               'Alces Barbearia',
               style:
-                  TextStyle(color: Colors.amber, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
             ),
             const Text(
               'Rua Erich Steinbach 22, Sala 2',
@@ -54,7 +54,7 @@ class EnderecoPage extends StatelessWidget {
             const Text(
               'Telefone:',
               style:
-                  TextStyle(color: Colors.amber, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
             ),
             const Text(
               '(47) 98789-4232',
@@ -72,7 +72,7 @@ class EnderecoPage extends StatelessWidget {
                   height: 25,
                   width: 50,
                   decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: Colors.orange,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,7 +92,7 @@ class EnderecoPage extends StatelessWidget {
                   height: 25,
                   width: 50,
                   decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: Colors.orange,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -112,7 +112,7 @@ class EnderecoPage extends StatelessWidget {
                   height: 25,
                   width: 50,
                   decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: Colors.orange,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
