@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project/pages/Splash/SplashScreen.dart';
 import 'package:project/pages/page_calendar/calendar_page.dart';
 import 'package:project/pages/page_change_professional/widgets/body_change_professional.dart';
-import 'package:project/pages/services/widgets/card_services.dart';
+import 'package:project/pages/services/services_page.dart';
 
 import 'pages/page_endereco/endereco.dart';
 
@@ -9,7 +10,8 @@ void main() {
   runApp(
     const MaterialApp(
       title: 'App teste',
-      home: PrincipalPage(),
+      home:MyApp(),
+      // home: PrincipalPage(),
       debugShowCheckedModeBanner: false,
     ),
   );
@@ -45,7 +47,7 @@ class PrincipalPage extends StatelessWidget {
         // width: size.width,
         // height: size.height,
         decoration:
-            BoxDecoration(color: Color.fromARGB(255, 150, 91, 51), boxShadow: [
+            BoxDecoration(color: Color.fromARGB(150, 150, 91, 51), boxShadow: [
           //efeito de profundidade
           BoxShadow(
               blurRadius: 30,
@@ -61,11 +63,12 @@ class PrincipalPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
+                    
 
                       // radius: 50,
                       backgroundColor: Colors.orange,
                       maxRadius: 90,
-                      child: Image.asset('assets/images/barber.png')),
+                      child: Image.asset('assets/images/logo.png')),
 
                   const SizedBox(
                     width: 10,
@@ -91,7 +94,7 @@ class PrincipalPage extends StatelessWidget {
                     )
                   ],
                   color: Color.fromARGB(255, 14, 10, 10),
-                  borderRadius: BorderRadius.circular(15)),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))),
               // color: Colors.amber,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -297,7 +300,7 @@ class PrincipalPage extends StatelessWidget {
                           horizontal: 20, vertical: 20),
                       child: Row(
                         children: [
-                           Icon(
+                          Icon(
                             shadows: [
                               Shadow(
                                 offset: Offset(0, 2),

@@ -7,9 +7,16 @@ class EnderecoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.brown.shade600,
+      backgroundColor: Colors.brown.shade700,
       appBar: AppBar(
-        backgroundColor: Colors.amber,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          color: Colors.black,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: Colors.orange,
         title: const Text(
           'Endereço',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -19,13 +26,19 @@ class EnderecoPage extends StatelessWidget {
       body: SizedBox(
         width: double.maxFinite,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 70, bottom: 80),
+              child: Image.asset(
+                "images/logo.png",
+                scale: 3,
+              ),
+            ),
             const Text(
               'Alces Barbearia',
               style:
-                  TextStyle(color: Colors.amber, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
             ),
             const Text(
               'Rua Erich Steinbach 22, Sala 2',
@@ -40,12 +53,12 @@ class EnderecoPage extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             const SizedBox(
-              height: 60,
+              height: 90,
             ),
             const Text(
               'Telefone:',
               style:
-                  TextStyle(color: Colors.amber, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
             ),
             const Text(
               '(47) 98789-4232',
@@ -63,8 +76,8 @@ class EnderecoPage extends StatelessWidget {
                   height: 27,
                   width: 53,
                   decoration: BoxDecoration(
-                    border: Border.all(width: 2, color: Colors.amber),
-                      color: Colors.brown.shade600,
+                      border: Border.all(width: 2, color: Colors.orange),
+                      color: Colors.brown.shade700,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,7 +86,8 @@ class EnderecoPage extends StatelessWidget {
                       Text(
                         'Maps',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                     ],
@@ -86,8 +100,8 @@ class EnderecoPage extends StatelessWidget {
                   height: 27,
                   width: 53,
                   decoration: BoxDecoration(
-                    border: Border.all(width: 2, color: Colors.amber),
-                       color: Colors.brown.shade600,
+                      border: Border.all(width: 2, color: Colors.orange),
+                      color: Colors.brown.shade700,
                       borderRadius: BorderRadius.circular(30)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -96,7 +110,8 @@ class EnderecoPage extends StatelessWidget {
                       Text(
                         'Waze',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                     ],
@@ -109,9 +124,10 @@ class EnderecoPage extends StatelessWidget {
                   height: 27,
                   width: 53,
                   decoration: BoxDecoration(
-                      border: Border.all(width: 2, color: Colors.amber),
-                      color: Colors.brown.shade600,
-                      borderRadius: BorderRadius.circular(30)),
+                    border: Border.all(width: 2, color: Colors.orange),
+                    color: Colors.brown.shade700,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -119,7 +135,8 @@ class EnderecoPage extends StatelessWidget {
                       Text(
                         'Uber',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                     ],

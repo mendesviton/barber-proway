@@ -1,64 +1,86 @@
 import 'package:flutter/material.dart';
-import '../services_page.dart';
 
-class CutsPage extends StatelessWidget {
-  const CutsPage({Key? key}) : super(key: key);
+import '../../page_calendar/calendar_page.dart';
+import '../../page_change_professional/widgets/body_change_professional.dart';
+
+class Services extends StatelessWidget {
+  final String type;
+  final String time;
+  final String value;
+
+  const Services({
+    Key? key,
+    required this.type,
+    required this.time,
+    required this.value,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    Color _backgroundColor = Colors.transparent;
 
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(150, 150, 91, 51),
-      appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.all(90),
-          child: Text("Serviços disponíveis"),
+    return InkWell(
+      onTap: () {
+        _backgroundColor = Colors.grey;
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const ChangeProfessional()));
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 10,
+          vertical: 10,
         ),
-        backgroundColor: const Color.fromARGB(255, 34, 25, 19),
-      ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: SizedBox(
-          height: size.height,
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                Servies(
-                  type: "Corte Cabelo",
-                  time: "30 min",
-                  value: "35,00",
+        decoration: BoxDecoration(
+          color: _backgroundColor,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+
+          children: [
+            Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: BoxDecoration(color: Colors.transparent),
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    type,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.amber,
+                    ),
+                  ),
                 ),
-                Servies(
-                  type: "Barba",
-                  time: "30 min",
-                  value: "30,00",
-                ),
-                Servies(
-                  type: "Relaxamento",
-                  time: "15 min",
-                  value: "30,00",
-                ),
-                Servies(
-                  type: "Limpeza de Ouvido",
-                  time: "15 min",
-                  value: "30,00",
-                ),
-                Servies(
-                  type: "Platinado",
-                  time: "1 hora",
-                  value: "180,00",
-                ),
-                Servies(
-                  type: "Reconstrução Capilar",
-                  time: "15 min",
-                  value: "30,00",
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                  ),
+                  child: Text(
+                    "Tempo: $time",
+                    style: const TextStyle(
+                      fontSize: 14,
+                      // fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(221, 255, 255, 255),
+                    ),
+                  ),
                 ),
               ],
             ),
-          ),
+            Container(
+              padding: const EdgeInsets.all(5),
+              child: Text(
+                "R\$ $value",
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.amber,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
