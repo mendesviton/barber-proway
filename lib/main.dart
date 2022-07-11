@@ -65,7 +65,7 @@ class PrincipalPage extends StatelessWidget {
                     // radius: 50,
                     backgroundColor: Colors.orange,
                     maxRadius: 90,
-                    child: Image.asset('images/logo.png'),
+                    child: Image.asset('assets/images/logo.png'),
                   ),
 
                   const SizedBox(
