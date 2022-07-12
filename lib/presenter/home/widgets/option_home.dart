@@ -57,11 +57,18 @@ class OptionHome extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-
-          const NavigationButton(title: 'Agendar horário',description: 'Escolha o barbeiro e agende o seu horário'),
-          const NavigationButton(title: 'Serviços',description: 'Escolha uma serviço de barbearia'),
-          const NavigationButton(title: 'Contato',description: 'Fale conosco'),
-          
+          const NavigationButton(
+              title: 'Agendar horário',
+              description: 'Escolha o barbeiro e agende o seu horário',
+              page: CalendarPage()),
+          const NavigationButton(
+              title: 'Serviços',
+              description: 'Escolha uma serviço de barbearia',
+              page: ServicesPage()),
+          const NavigationButton(
+              title: 'Contato',
+              description: 'Fale conosco',
+              page: AdressPage()),
         ],
       ),
     );
@@ -69,15 +76,15 @@ class OptionHome extends StatelessWidget {
 }
 
 class NavigationButton extends StatelessWidget {
-  
   final String title;
   final String description;
-  
-  
+  final Widget page;
+
   const NavigationButton({
     Key? key,
     required this.title,
     required this.description,
+    required this.page,
   }) : super(key: key);
 
   @override
@@ -88,7 +95,7 @@ class NavigationButton extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const ServicesPage(),
+            builder: (context) => page,
           ),
         );
       },
@@ -124,7 +131,7 @@ class NavigationButton extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:  [
+                children: [
                   Text(title,
                       style: const TextStyle(
                           shadows: [
